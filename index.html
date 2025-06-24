@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  <div class="loading-animation"></div>
+
+  
+  <h1 id="welcome-text">Welcome</h1>
+
+ 
+  <div class="generator-container">
+    <h2>Password Generator</h2>
+
+    <div class="input-wrapper">
+      <input type="text" id="password" value="MySecureP@ss123" readonly />
+      <span class="copy-icon" onclick="copyPassword()">📋</span>
+    </div>
+
+    <label>Password Length: <span class="input-length">12</span></label>
+    <input type="range" id="length" min="8" max="24" value="12" oninput="updateLength()" />
+
+   <div class="checkbox-wrapper">
+  <label>
+    Include Lowercase (a-z)
+    <input type="checkbox" checked />
+  </label>
+  <label>
+    Include Uppercase (A-Z)
+    <input type="checkbox" checked />
+  </label>
+  <label>
+    Include Numbers (0-9)
+    <input type="checkbox" checked />
+  </label>
+  <label>
+    Include Symbols (!@#$...)
+    <input type="checkbox" checked />
+  </label>
+</div>
+
+
+    <button onclick="generatePassword()">Generate Password</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

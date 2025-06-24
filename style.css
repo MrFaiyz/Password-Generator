@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  background: radial-gradient(#000014, #000);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Spinner */
+.loading-animation {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  border-top: 6px solid navy;
+  border-right: 6px solid #000020;
+  border-bottom: 6px solid navy;
+  border-left: 6px solid #000020;
+  background: radial-gradient(#000015, #000);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spinAccelerate 2s ease-in forwards;
+  filter: drop-shadow(0 0 5px navy)
+          drop-shadow(0 0 15px navy)
+          drop-shadow(0 0 30px navy);
+  z-index: 10;
+}
+
+@keyframes spinAccelerate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(4160deg); }
+}
+
+/* Welcome Text */
+#welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+    font-size: 38px;
+  text-shadow: 0 0 10px #00f0ff;
+  transition: all 1.5s ease;
+  z-index: 5;
+}
+
+#welcome-text.show {
+  opacity: 1;
+    
+}
+
+#welcome-text.move-up {
+  top: 30px;
+  transform: translateX(-50%);
+  font-size: 38px;
+}
+
+/* Generator Box */
+.generator-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #111;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffff80;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+  margin-top: 150px;
+}
+
+/* Inputs */
+.input-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 12px;
+  font-size: 16px;
+  background: #000;
+  color: #00ffea;
+  border: 2px solid #00ffff;
+  border-radius: 6px;
+  padding-right: 40px;
+}
+
+.copy-icon {
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Range & Checkboxes */
+input[type="range"] {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.checkbox-wrapper label {
+    font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  margin-left: auto;
+}
+
+
+/* Button */
+button {
+  padding: 10px 20px;
+  background: #00e6ff;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #00bbcc;
+}
