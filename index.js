@@ -14,7 +14,7 @@ window.onload = () => {
     welcome.classList.add('move-up');
     box.style.opacity = '1';
     box.style.transform = 'translateY(0)';
-    document.body.style.background = '#000';
+    document.body.style.background = 'rgb(3,7,18)';
   }, 4000);
 };
 
